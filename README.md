@@ -14,4 +14,8 @@
 	-  ssh -i ~/.ssh/gcp <username-ssh>@<external-ip-of-instance>
 4. Creating ssh config file for easy access to gcp vm
 5. Connecting VScode to gcp
-6. Setting permissions in docker.
+6. Docker
+	A. Setting permissions in docker.
+	B. Practicing docker
+	C.
+7. 
