@@ -46,7 +46,7 @@ def main(params):
     engine.connect()
 
     # Create schema for DF
-    print(pd.io.sql.get_schema(df,name=table_name,con=engine))
+    #print(pd.io.sql.get_schema(df,name=table_name,con=engine))
 
     # Creating an iterator
 
