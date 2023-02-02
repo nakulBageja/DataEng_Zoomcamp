@@ -35,7 +35,7 @@ def main(params):
     download_dir_path = params.dir
     
     # Downloading the csv file
-    os.system(f'wget {url} -O {download_dir_path}/{csv_name} --directory-prefix={}')
+    os.system(f'wget {url} -O {download_dir_path}/{csv_name}')
     
     
     # Connection string for local-machine
