@@ -56,8 +56,8 @@ def main(params):
     df = next(df_iter)
 
     # Converting the datatypes
-    df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-    df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+    #df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+    #df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
     # Creating the table in PostgresSQL
     df.head(n=0).to_sql(name=table_name,con=engine,if_exists='replace')
@@ -70,8 +70,8 @@ def main(params):
         t_start = time()
         df = next(df_iter) 
 
-        df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-        df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+        #df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+        #df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
         df.to_sql(name=table_name,con=engine,if_exists='append')
 
