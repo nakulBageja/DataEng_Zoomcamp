@@ -60,3 +60,23 @@ https://github.com/ziritrion/dataeng-zoomcamp/blob/main/notes
 	-in this example hostmasine port is 5433! Remember this №, you must connect to DB using pgcli with THIS port!!!
 	```
 8. Uploading NYC Taxi data to Postgres DB.
+9. Running .ipynb files using
+    1. Execute.py file created.
+    2. Converting notebook to python script.
+        ```
+        jupyter nbconvert --to=script upload-data.ipynb
+        ```
+10. Running dynamic python script
+    ```
+    URL = "https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv"
+    python ingest_data.py \
+        --user=root \
+        --password=root \
+        --host=localhost \
+        --port=5432 \
+        --db=ny_taxi_db \
+        --table_name=taxi_zones \
+        --url=${URL} \
+        --dir=/home/nakulB/data/ \
+        --csv_name=taxi_zone.csv
+    ```
